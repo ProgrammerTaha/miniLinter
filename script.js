@@ -40,3 +40,6 @@ to the end.';
 let overusedWords = ['really', 'very', 'basically'];
 let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
+//split the string into individual words
+let storyWords = story.split(' ');
+
