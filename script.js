@@ -16,6 +16,11 @@ let unnecessaryWords = ['extremely', 'literally', 'actually'];
 let storyWords = story.split(' ');
 
 //filter out unnecessary words
-let betterWords = storyWords.filter(word => word !== unnecessaryWords[0] && word !== unnecessaryWords[1] && word !== unnecessaryWords[2]);
-// let betterWords = storyWords.filter(word => word !== );
-// console.log(betterWords.length);
+/* 
+let betterWords = storyWords.filter(word => word !== unnecessaryWords[0] && word !== unnecessaryWords[1] && word !== unnecessaryWords[2]); 
+*/
+
+//better way less code
+let betterWords = storyWords.filter(word => !unnecessaryWords.includes(word));
+console.log(betterWords.length);
+
