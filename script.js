@@ -22,5 +22,28 @@ let betterWords = storyWords.filter(word => word !== unnecessaryWords[0] && word
 
 //better way less code
 let betterWords = storyWords.filter(word => !unnecessaryWords.includes(word));
-console.log(betterWords.length);
+
+//how many times overused words used
+
+//concise way
+const overusedWordsCount = overusedWord => betterWords.reduce(((over, word) => word === overusedWord ? over + 1 : over), 0);
+
+//another way
+/*
+let reallyCount = 0;
+let veryCount = 0;
+let basicallyCount = 0;
+
+for (word of betterWords) {
+  if (word === 'really') {
+    reallyCount += 1;
+  } else if (word === 'very') {
+    veryCount += 1;
+  } else if (word === 'basically') {
+    basicallyCount += 1;
+  }
+}
+*/
+
+// console.log(overusedWordsCount('very'));
 
