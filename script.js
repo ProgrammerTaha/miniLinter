@@ -47,3 +47,12 @@ for (word of betterWords) {
 
 // console.log(overusedWordsCount('very'));
 
+//how many sentences are in the paragraph
+const sentence = betterWords.forEach(letter => {
+  betterWords.join(' ');
+  let sentencesCounter = 0;
+  if (letter === '.' || letter === '!') {
+    return sentencesCounter += 1;
+  };
+});
+console.log(sentence);
