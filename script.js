@@ -60,11 +60,19 @@ console.log(sentenceCounter);
 */
 
 //better way
-let sentenceCounter = 0;
+let sentenceCount = 0;
 for (word of betterWords) {
   if (word[word.length - 1] === '.' || word[word.length - 1] === '!') {
-    sentenceCounter += 1;
+    sentenceCount += 1;
   }
 }
-console.log(sentenceCounter);
+
+let sentencesCounter = `There are ${sentenceCount} sentences in the paragraph.`;
+// console.log(sentencesCounter);
+
+let overusedWordsCounter = `The word 'very' appears ${overusedWordsCount('very')}, the word 'really' appears ${overusedWordsCount('really')} and the word 'basically' appears ${overusedWordsCount('basically')}.`;
+// console.log(overusedWordsCounter);
+
+let wordsCounter = betterWords.length;
+// console.log(wordsCounter);
 
