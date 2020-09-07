@@ -48,11 +48,23 @@ for (word of betterWords) {
 // console.log(overusedWordsCount('very'));
 
 //how many sentences are in the paragraph
-const sentence = betterWords.forEach(letter => {
-  betterWords.join(' ');
-  let sentencesCounter = 0;
-  if (letter === '.' || letter === '!') {
-    return sentencesCounter += 1;
-  };
-});
-console.log(sentence);
+
+/*a simple way
+let sentenceCounter = 0;
+for (let i = 0; i < story.length; i++) {
+  if (story[i] === '.' || story[i] === '!') {
+    sentenceCounter += 1;
+  }
+}
+console.log(sentenceCounter);
+*/
+
+//better way
+let sentenceCounter = 0;
+for (word of betterWords) {
+  if (word[word.length - 1] === '.' || word[word.length - 1] === '!') {
+    sentenceCounter += 1;
+  }
+}
+console.log(sentenceCounter);
+
