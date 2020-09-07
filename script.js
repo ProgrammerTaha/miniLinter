@@ -64,11 +64,24 @@ for (word of betterWords) {
   }
 }
 
+let overusedWordsCounter = overusedWordsCount('very') + overusedWordsCount('really') + overusedWordsCount('basically');
+
 const counter = () => {
   console.log(`There are ${sentenceCount} sentences in the paragraph.`);
   console.log(`The word 'very' appears ${overusedWordsCount('very')}, the word 'really' appears ${overusedWordsCount('really')} and the word 'basically' appears ${overusedWordsCount('basically')}.`);
-  console.log(`There are ${betterWords.length} words in the story.`);
+  console.log(`There are ${betterWords.length - overusedWordsCounter} words in the story.`);
 }
 
 counter();
 console.log(betterWords.join(' '));
+
+//last optional task
+/*
+
+TODO: For the overused words, remove it every other time it appears.
+
+TODO: Write a function that finds the word that appears the greatest number of times.
+
+TODO: Replaced overused words with something else.
+
+*/
