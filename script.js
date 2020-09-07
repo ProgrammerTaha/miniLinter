@@ -45,8 +45,6 @@ for (word of betterWords) {
 }
 */
 
-// console.log(overusedWordsCount('very'));
-
 //how many sentences are in the paragraph
 
 /*a simple way
@@ -56,7 +54,6 @@ for (let i = 0; i < story.length; i++) {
     sentenceCounter += 1;
   }
 }
-console.log(sentenceCounter);
 */
 
 //better way
@@ -67,12 +64,10 @@ for (word of betterWords) {
   }
 }
 
-let sentencesCounter = `There are ${sentenceCount} sentences in the paragraph.`;
-// console.log(sentencesCounter);
+const counter = () => {
+  console.log(`There are ${sentenceCount} sentences in the paragraph.`);
+  console.log(`The word 'very' appears ${overusedWordsCount('very')}, the word 'really' appears ${overusedWordsCount('really')} and the word 'basically' appears ${overusedWordsCount('basically')}.`);
+  console.log(`There are ${betterWords.length} words in the story.`);
+}
 
-let overusedWordsCounter = `The word 'very' appears ${overusedWordsCount('very')}, the word 'really' appears ${overusedWordsCount('really')} and the word 'basically' appears ${overusedWordsCount('basically')}.`;
-// console.log(overusedWordsCounter);
-
-let wordsCounter = betterWords.length;
-// console.log(wordsCounter);
-
+counter();
