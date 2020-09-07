@@ -71,3 +71,4 @@ const counter = () => {
 }
 
 counter();
+console.log(betterWords.join(' '));
